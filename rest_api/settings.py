@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'todos',
     'api',
+    'authentic',
 ]
 
 MIDDLEWARE = [
@@ -111,6 +112,8 @@ REST_FRAMEWORK = {
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
 
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (

@@ -24,4 +24,5 @@ urlpatterns = [
     path('api-test/', include(book_resource.urls)),
     path('api-test/', include('api_test.urls')),
     path('api/', include('api.urls')),
+    path('authentic/', include('authentic.urls')),
 ]
